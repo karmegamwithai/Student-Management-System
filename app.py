@@ -4,11 +4,6 @@ from flask import *
 
 app=Flask(__name__)
 
-DB_HOST:'db.eubzzteajdkhisnzqpke.supabase.co'
-DB_USER:''
-DB_PASSWORD:''
-DB_NAME:''
-DB_PORT:'5432'
 
 # Database Configuration
 def get_db_connection():
