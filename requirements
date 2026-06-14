@@ -1,7 +1,0 @@
-Student-Management-System/
-│
-├── app.py
-├── requirements.txt
-├── vercel.json
-├── templates/
-└── static/

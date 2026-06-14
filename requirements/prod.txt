@@ -1,0 +1,8 @@
+Student-Management-System/
+│
+├── app.py
+├── vercel.json
+├── requirements/
+│   └── prod.txt
+│
+└── templates/
