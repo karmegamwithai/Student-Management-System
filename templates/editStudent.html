@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom styling to tint checkboxes and radios with our theme colors */
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: #d946ef;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 min-h-screen p-4 md:p-8 flex items-center justify-center">
+
+<div class="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+
+    <div class="bg-gradient-to-r from-pink-500 to-violet-600 p-6 text-center text-white relative">
+        <div class="inline-flex p-3 bg-white/10 rounded-full mb-2 backdrop-blur-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+            </svg>
+        </div>
+        <h2 class="text-2xl font-bold tracking-wide">Edit Student Details</h2>
+        <p class="text-pink-100 text-xs mt-1">Update profile information systematically</p>
+    </div>
+
+    <form method="POST" class="p-6 md:p-8 text-sm text-gray-700">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+
+            <div>
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-pink-500"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                    First Name
+                </label>
+                <input type="text" name="first_name" value="{{student[1]}}" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all font-medium text-slate-800">
+            </div>
+
+            <div>
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-pink-500"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                    Last Name
+                </label>
+                <input type="text" name="last_name" value="{{student[2]}}" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all font-medium text-slate-800">
+            </div>
+
+            <div>
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-violet-500"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                    Date Of Birth
+                </label>
+                <input type="date" name="dob" value="{{student[3]}}" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100 transition-all font-medium text-slate-800">
+            </div>
+
+            <div>
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-pink-500"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0l-7.5-4.615a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                    Email
+                </label>
+                <input type="email" name="email" value="{{student[5]}}" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all font-medium text-slate-800">
+            </div>
+
+            <div>
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-violet-500"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+                    Phone
+                </label>
+                <input type="text" name="phone" value="{{student[6]}}" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all font-medium text-slate-800">
+            </div>
+
+            <div>
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-violet-500"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.174L10.72 14.175a3.75 3.75 0 004.56 0l6.46-4.001m-17.48 0L12 4.575l7.48 4.599m-17.48 0A1.25 1.25 0 003 10.33v6.417c0 .538.343 1.022.856 1.196l6.75 2.295a1.25 1.25 0 00.788 0l6.75-2.295a1.25 1.25 0 00.856-1.196V10.33c0-.493-.29-.937-.74-1.125M16.5 15.75h.008v.008H16.5v-.008z" /></svg>
+                    Course
+                </label>
+                <div class="relative">
+                    <select name="course" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100 transition-all font-medium text-slate-800 appearance-none bg-white">
+                        <option value="Computer Science" {% if student[8]=='Computer Science' %}selected{% endif %}>Computer Science</option>
+                        <option value="Information Technology" {% if student[8]=='Information Technology' %}selected{% endif %}>Information Technology</option>
+                        <option value="Electronics" {% if student[8]=='Electronics' %}selected{% endif %}>Electronics</option>
+                        <option value="Mechanical" {% if student[8]=='Mechanical' %}selected{% endif %}>Mechanical</option>
+                        <option value="Civil" {% if student[8]=='Civil' %}selected{% endif %}>Civil</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block font-semibold text-slate-600 mb-2 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-violet-500"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+                    Gender
+                </label>
+                <div class="flex items-center gap-6 bg-slate-50 p-3 rounded-xl border border-slate-200/60 font-medium">
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="radio" name="gender" value="Male" {% if student[4]=='Male' %}checked{% endif %} class="w-4 h-4 text-pink-600 focus:ring-pink-500">
+                        <span>Male</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="radio" name="gender" value="Female" {% if student[4]=='Female' %}checked{% endif %} class="w-4 h-4 text-pink-600 focus:ring-pink-500">
+                        <span>Female</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="radio" name="gender" value="Other" {% if student[4]=='Other' %}checked{% endif %} class="w-4 h-4 text-pink-600 focus:ring-pink-500">
+                        <span>Other</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block font-semibold text-slate-600 mb-1.5 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-violet-500"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
+                    Address
+                </label>
+                <textarea name="address" rows="3" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100 transition-all font-medium text-slate-800 resize-none">{{student[7]}}</textarea>
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block font-semibold text-slate-600 mb-2 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-pink-500"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Hobbies
+                </label>
+                <div class="flex items-center gap-6 bg-slate-50 p-3 rounded-xl border border-slate-200/60 font-medium">
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="checkbox" name="hobbies" value="Sports" {% if 'Sports' in student[9] %}checked{% endif %} class="w-4 h-4 text-pink-600 rounded focus:ring-pink-500">
+                        <span>Sports</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="checkbox" name="hobbies" value="Reading" {% if 'Reading' in student[9] %}checked{% endif %} class="w-4 h-4 text-pink-600 rounded focus:ring-pink-500">
+                        <span>Reading</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="checkbox" name="hobbies" value="Music" {% if 'Music' in student[9] %}checked{% endif %} class="w-4 h-4 text-pink-600 rounded focus:ring-pink-500">
+                        <span>Music</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-4 border-t border-slate-100">
+            <a href="/viewstudents" class="px-5 py-2.5 rounded-xl font-semibold text-slate-500 bg-slate-100 hover:bg-slate-200 transition-colors duration-200 text-center">
+                Cancel
+            </a>
+            <button type="submit" class="px-6 py-2.5 rounded-xl font-semibold text-white bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 shadow-md hover:shadow-lg transition-all duration-200">
+                Update Changes
+            </button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center p-4 text-gray-800 relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-tr before:from-violet-950/40 before:to-pink-900/30 before:backdrop-blur-sm"
+      style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1920&auto=format&fit=crop');">
+
+    <!-- Card container with elegant white base and a subtle fuchsia top reflection border -->
+    <div class="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center border border-pink-100 relative z-10 transform transition duration-300">
+
+        <!-- Welcome Header with Pink to Violet Text Gradient -->
+        <h1 class="text-3xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+            Welcome to my Website, <br>
+            <span class="bg-gradient-to-r from-pink-500 to-violet-600 bg-clip-text text-transparent block mt-2 font-extrabold">{{name}}</span>
+        </h1>
+
+        <!-- Action Button with matching solid pink/violet gradient look -->
+        <a href="/addstudent" class="inline-block w-full bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white font-medium py-3.5 px-4 rounded-xl transition duration-200 shadow-lg shadow-fuchsia-500/20 hover:shadow-fuchsia-500/30 flex items-center justify-center space-x-2 group outline-none active:scale-[0.98]">
+            <span>Add Student Here</span>
+            <!-- Decorative smooth sliding arrow icon -->
+            <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+        </a>
+        <!-- Action Button with matching solid pink/violet gradient look -->
+        <a href="/viewstudents" class="inline-block w-full mt-5 bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white font-medium py-3.5 px-4 rounded-xl transition duration-200 shadow-lg shadow-fuchsia-500/20 hover:shadow-fuchsia-500/30 flex items-center justify-center space-x-2 group outline-none active:scale-[0.98]">
+            <span>View Student Here</span>
+            <!-- Decorative smooth sliding arrow icon -->
+            <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+        </a>
+    </div>
+
+</body>
+</html>
