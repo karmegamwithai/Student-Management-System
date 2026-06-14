@@ -1,7 +1,7 @@
 # 🎓 Student Management System
 
 
-[![Student Management System Banner](https://5.imimg.com/data5/SELLER/Default/2023/10/355416189/DM/UD/MI/3497104/responder-student-reporting-management-system.png)](https://5.imimg.com/data5/SELLER/Default/2023/10/355416189/DM/UD/MI/3497104/responder-student-reporting-management-system.png)
+[![Student Management System Banner]([https://5.imimg.com/data5/SELLER/Default/2023/10/355416189/DM/UD/MI/3497104/responder-student-reporting-management-system.png)](https://5.imimg.com/data5/SELLER/Default/2023/10/355416189/DM/UD/MI/3497104/responder-student-reporting-management-system.png](https://www.sarvika.com/wp-content/uploads/2022/02/Student-Management-System.png)
 
 ## 📖 Project Overview
 
