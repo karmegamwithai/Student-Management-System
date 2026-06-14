@@ -28,7 +28,7 @@ The application supports complete **CRUD (Create, Read, Update, Delete)** operat
 * Flask
 * Supabase PostgreSQL
 * HTML5
-* CSS3
+* Tailwind CSS
 * SQL
 
 ---
