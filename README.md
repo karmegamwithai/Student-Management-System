@@ -37,19 +37,19 @@ The application supports complete **CRUD (Create, Read, Update, Delete)** operat
 
 ### Home Page
 
-![Home Page](images/home-page.avif)
+![Home Page](images/home-page.png)
 
 ### Student Registration
 
-![Student Registration](images/student-register.avif)
+![Student Registration](images/student-register.png)
 
 ### View Students
 
-![View Students](images/view-students.avif)
+![View Students](images/view-students.png)
 
 ### Edit Student Details
 
-![Edit Student](images/edit-student.avif)
+![Edit Student](images/edit-student.png)
 
 ---
 
