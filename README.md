@@ -28,7 +28,7 @@ The application supports complete **CRUD (Create, Read, Update, Delete)** operat
 * Flask
 * Supabase PostgreSQL
 * HTML5
-* CSS3
+* Tailwind CSS
 * SQL
 
 ---
@@ -37,19 +37,19 @@ The application supports complete **CRUD (Create, Read, Update, Delete)** operat
 
 ### Home Page
 
-![Home Page](images/home-page.avif)
+![Home Page](images/home-page.png)
 
 ### Student Registration
 
-![Student Registration](images/student-register.avif)
+![Student Registration](images/student-register.png)
 
 ### View Students
 
-![View Students](images/view-students.avif)
+![View Students](images/view-students.png)
 
 ### Edit Student Details
 
-![Edit Student](images/edit-student.avif)
+![Edit Student](images/edit-student.png)
 
 ---
 
@@ -68,9 +68,9 @@ Student-Management-System/
 │   ├── viewstudent.html
 │   └── editstudent.html
 │
-├── static/
-│   ├── css/
-│   └── images/
+├── images/
+│   
+│   
 │
 └── README.md
 ```
@@ -130,4 +130,4 @@ python app.py
 
 **Karmegam J**
 
-Passionate UX/UI Designer and Python Developer focused on building user-friendly and data-driven applications.
+Passionate Data Scientist and Python Developer focused on data analysis, machine learning, and building data-driven applications that deliver meaningful insights and business value.
