@@ -5,13 +5,15 @@ from flask import *
 app=Flask(__name__)
 
 # Database Configuration
-db = psycopg2.connect(
-    host=os.environ.get("DB_HOST"),
-    user=os.environ.get("DB_USER"),
-    password=os.environ.get("DB_PASSWORD"),
-    database=os.environ.get("DB_NAME"),
-    port=os.environ.get("DB_PORT")
-)
+def get_db_connection():
+    return psycopg2.connect(
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        dbname=os.getenv("DB_NAME"),
+        port=os.getenv("DB_PORT")
+    )
+
 
 @app.route("/")
 def openhomepage():
@@ -47,6 +49,7 @@ def add_student():
             hobbies
 )
 
+        db = get_db_connection()
         cursor = db.cursor() # excute the query
 
         sql = """
@@ -86,6 +89,7 @@ def add_student():
 
 @app.route("/viewstudents")
 def view_students():
+    db = get_db_connection()
     cursor = db.cursor()
 
     sql = """
@@ -117,7 +121,7 @@ def view_students():
 
 @app.route("/editstudent/<int:id>", methods=["GET", "POST"])
 def edit_student(id):
-
+    db = get_db_connection()
     cursor = db.cursor()
 
     if request.method == "POST":
@@ -192,13 +196,13 @@ def edit_student(id):
     cursor.close()
 
     return render_template(
-        "editStudent.html",
+        "editstudent.html",
         student=student
     )
 
 @app.route("/deletestudent/<int:id>")
 def delete_student(id):
-
+    db = get_db_connection()
     cursor = db.cursor()
 
     sql = """
