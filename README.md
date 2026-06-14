@@ -68,9 +68,9 @@ Student-Management-System/
 │   ├── viewstudent.html
 │   └── editstudent.html
 │
-├── static/
-│   ├── css/
-│   └── images/
+├── images/
+│   
+│   
 │
 └── README.md
 ```
