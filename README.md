@@ -130,4 +130,4 @@ python app.py
 
 **Karmegam J**
 
-Passionate UX/UI Designer and Python Developer focused on building user-friendly and data-driven applications.
+Passionate Data Scientist and Python Developer focused on data analysis, machine learning, and building data-driven applications that deliver meaningful insights and business value.
