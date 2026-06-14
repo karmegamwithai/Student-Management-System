@@ -14,6 +14,12 @@ def get_db_connection():
         port=os.getenv("DB_PORT")
     )
 
+try:
+    db = get_db_connection()
+    print("Database connected successfully")
+except Exception as e:
+    print("Database Error:", e)
+
 
 @app.route("/")
 def openhomepage():
